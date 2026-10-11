@@ -1,0 +1,18 @@
+[package]
+name = "rtether"
+version = "0.1.0"
+edition = "2024"
+description = "Android (Samsung/RNDIS) USB tethering for macOS, with per-app USB + Wi-Fi bonding"
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+keywords = ["tethering", "rndis", "macos", "android", "usb"]
+categories = ["network-programming", "hardware-support"]
+publish = false
+
+[dependencies]
+ipstack = "1.0.1"
+libc = "0.2.190"
+nusb = "0.2.7"
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.152"
+tokio = { version = "1.53.2", features = ["rt-multi-thread", "net", "io-util", "sync", "time", "macros"] }
